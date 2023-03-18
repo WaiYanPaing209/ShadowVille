@@ -1,0 +1,159 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Main Scenes/Sector1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Main Scenes/Character.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Inventory/Inventory.tscn" type="PackedScene" id=3]
+[ext_resource path="res://UI/UserInterface.gd" type="Script" id=4]
+[ext_resource path="res://Hotbar/Hotbar.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Main Scenes/ItemDrop.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/GroundTiles/MainTiles-sheet.png" type="Texture" id=7]
+[ext_resource path="res://assets/White_New.png" type="Texture" id=8]
+[ext_resource path="res://Main Scenes/Trees/Tree_Style_1.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Main Scenes/Buildings/Van.tscn" type="PackedScene" id=10]
+[ext_resource path="res://TestScenes/TestMob.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Managers/GameManagers.gd" type="Script" id=12]
+[ext_resource path="res://assets/building1.png" type="Texture" id=13]
+[ext_resource path="res://Enemies/Necromancer.tscn" type="PackedScene" id=14]
+
+[sub_resource type="TileSet" id=4]
+0/name = "White_New.png 0"
+0/texture = ExtResource( 8 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="TileSet" id=2]
+0/name = "MainTiles-sheet.png 0"
+0/texture = ExtResource( 7 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 256, 752, 64, 48 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "MainTiles-sheet.png 1"
+1/texture = ExtResource( 7 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 320, 768, 48, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "MainTiles-sheet.png 2"
+2/texture = ExtResource( 7 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 576, 736, 64, 64 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+
+[node name="Main" type="Node2D"]
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="GameManagers" type="Node2D" parent="World"]
+script = ExtResource( 12 )
+
+[node name="Sector1" type="Node2D" parent="World"]
+
+[node name="Sector1_Divider" parent="World/Sector1" instance=ExtResource( 1 )]
+
+[node name="Ground" type="TileMap" parent="World/Sector1"]
+modulate = Color( 0.882353, 0.882353, 0.882353, 1 )
+rotation = 0.785398
+mode = 1
+tile_set = SubResource( 4 )
+cell_size = Vector2( 16, 16 )
+cell_y_sort = true
+format = 1
+
+[node name="Water" type="TileMap" parent="World/Sector1"]
+modulate = Color( 0.847059, 0.92549, 0.921569, 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+
+[node name="Things" type="TileMap" parent="World/Sector1"]
+modulate = Color( 0.843137, 0.843137, 0.843137, 1 )
+tile_set = SubResource( 2 )
+cell_size = Vector2( 16, 16 )
+cell_y_sort = true
+format = 1
+
+[node name="YSort" type="YSort" parent="World/Sector1"]
+
+[node name="Tree_1" parent="World/Sector1/YSort" instance=ExtResource( 9 )]
+position = Vector2( 100, -16 )
+
+[node name="Tree_2" parent="World/Sector1/YSort" instance=ExtResource( 9 )]
+position = Vector2( 15, 129 )
+
+[node name="testMob" parent="World/Sector1/YSort" instance=ExtResource( 11 )]
+position = Vector2( -303, -16 )
+
+[node name="ItemDrop" parent="World/Sector1/YSort" instance=ExtResource( 6 )]
+
+[node name="Character" parent="World/Sector1/YSort" instance=ExtResource( 2 )]
+position = Vector2( 501, -114 )
+collision_mask = 1
+
+[node name="van" parent="World/Sector1/YSort" instance=ExtResource( 10 )]
+position = Vector2( 235, 151 )
+
+[node name="Building1" type="Sprite" parent="World/Sector1/YSort"]
+position = Vector2( 610, 122 )
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 13 )
+
+[node name="Necromancer" parent="World/Sector1/YSort" instance=ExtResource( 14 )]
+position = Vector2( -261, 368 )
+
+[node name="UserInterface" type="CanvasLayer" parent="World"]
+script = ExtResource( 4 )
+
+[node name="Inventory" parent="World/UserInterface" instance=ExtResource( 3 )]
+visible = false
+
+[node name="Hotbar" parent="World/UserInterface" instance=ExtResource( 5 )]
+position = Vector2( 1, 0 )
+
+[node name="StaminaBar" type="ProgressBar" parent="World/UserInterface"]
+margin_left = 23.0
+margin_top = 25.0
+margin_right = 190.0
+margin_bottom = 44.0
+percent_visible = false
+
+[node name="MP" type="Label" parent="World/UserInterface"]
+margin_left = 30.0
+margin_top = 52.0
+margin_right = 70.0
+margin_bottom = 66.0
+text = "sample"

@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Enemies/Necromancer.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Main Scenes/Character.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/Pine Tree.png" type="Texture" id=3]
+[ext_resource path="res://assets/Apocalyptic Van.png" type="Texture" id=4]
+
+[node name="Test" type="Node2D"]
+
+[node name="Character" parent="." instance=ExtResource( 2 )]
+position = Vector2( 396, 97 )
+
+[node name="PineTree" type="Sprite" parent="."]
+position = Vector2( 488, 90 )
+texture = ExtResource( 3 )
+
+[node name="ApocalypticVan" type="Sprite" parent="."]
+position = Vector2( 328, 34 )
+texture = ExtResource( 4 )
+
+[node name="Necromancer" parent="." instance=ExtResource( 1 )]
+position = Vector2( 54, 40 )

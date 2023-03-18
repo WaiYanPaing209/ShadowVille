@@ -1,0 +1,54 @@
+{
+  "Tree Branch": {
+    "ItemCategory": "Resource",
+    "StackSize": 99,
+    "Description": "A sturdy tree branch that can be used for crafting."
+  },
+  "Slime Potion": {
+    "ItemCategory": "Consumable",
+    "AddHealth": 5,
+    "AddEnergy": 30,
+    "StackSize": 99,
+    "Description": "It smells like medicine."
+  },
+  "Magic Wand": {
+    "ItemCategory": "Magical Item",
+    "ItemAttack": 3,
+    "ItemDamageModifier": 0.75, 
+    "StackSize": 1,
+    "Description": "Looks like an essential magic item for casting projectiles..."
+  },
+  "Hood": {
+     "ItemCategory": "Head",
+     "StackSize": 1,
+     "Attributes": {
+	"Strength": 5,
+	"Intelligence": 3,
+    },
+     "Description": "An ordinary Brown Hood"
+  },
+  "Chest Robe": {
+    "ItemCategory": "Chest",
+    "StackSize": 1,
+    "Attributes": {
+	"Strength": 3,
+	"Intelligence": 2,
+    },
+    "Description": "A good ol' wizard robe"
+  },
+  "Blue Jeans": {
+    "ItemCategory": "Pants",
+    "StackSize": 1,
+    "Description": "Blue jeans!!"
+  },
+  "Brown Boots": {
+    "ItemCategory": "Shoes",
+    "StackSize": 1,
+    "Description": "Some dirty boots!!"
+  },
+   "Blood": {
+    "ItemCategory": "Resource",
+    "StackSize": 10,
+    "Description": "A vital liquid for every animals"
+  }
+}
