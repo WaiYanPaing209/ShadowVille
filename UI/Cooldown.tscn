@@ -1,0 +1,105 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://font/m5x7.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/White_New.png" type="Texture" id=2]
+[ext_resource path="res://assets/HealSpell.png" type="Texture" id=3]
+[ext_resource path="res://assets/InventoryContainer.png" type="Texture" id=4]
+[ext_resource path="res://assets/GhostSpell_Icon.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 22
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[node name="Cooldown" type="Control"]
+anchor_right = 0.287
+anchor_bottom = 0.225
+margin_right = 0.320007
+
+[node name="bg" type="TextureRect" parent="."]
+modulate = Color( 0.278431, 0.25098, 0.25098, 0.439216 )
+margin_left = -1.0
+margin_right = 179.0
+margin_bottom = 70.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Border" type="TextureRect" parent="."]
+margin_left = 7.0
+margin_top = 13.0
+margin_right = 47.0
+margin_bottom = 53.0
+texture = ExtResource( 4 )
+expand = true
+
+[node name="CD" type="TextureProgress" parent="Border"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -16.0
+margin_top = -16.0
+margin_right = 48.0
+margin_bottom = 48.0
+rect_scale = Vector2( 0.5, 0.5 )
+step = 0.01
+value = 50.0
+texture_under = ExtResource( 5 )
+texture_progress = ExtResource( 5 )
+fill_mode = 4
+tint_progress = Color( 0.298039, 0.262745, 0.262745, 1 )
+
+[node name="numberCD" type="Label" parent="Border"]
+visible = false
+anchor_left = 0.342
+anchor_top = 0.308
+anchor_right = 0.737
+anchor_bottom = 0.667
+margin_left = 1.766
+margin_top = -2.47
+margin_right = 1.756
+margin_bottom = 1.529
+custom_colors/font_color = Color( 0.921569, 0.94902, 0.968627, 1 )
+custom_colors/font_outline_modulate = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "8"
+
+[node name="Border2" type="TextureRect" parent="."]
+margin_left = 54.0
+margin_top = 13.0
+margin_right = 94.0
+margin_bottom = 53.0
+texture = ExtResource( 4 )
+expand = true
+
+[node name="CD2" type="TextureProgress" parent="Border2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -16.0
+margin_top = -16.0
+margin_right = 16.0
+margin_bottom = 16.0
+step = 0.01
+value = 50.0
+texture_under = ExtResource( 3 )
+texture_progress = ExtResource( 3 )
+fill_mode = 4
+tint_progress = Color( 0.682353, 0.682353, 0.682353, 1 )
+
+[node name="numberCD" type="Label" parent="Border2"]
+visible = false
+anchor_left = 0.342
+anchor_top = 0.308
+anchor_right = 0.737
+anchor_bottom = 0.667
+margin_left = 2.268
+margin_top = -2.476
+margin_right = 2.258
+margin_bottom = 1.523
+custom_colors/font_color = Color( 0.184314, 0.486275, 0.686275, 1 )
+custom_colors/font_outline_modulate = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "8"
