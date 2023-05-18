@@ -26,12 +26,16 @@ func set_item(nm, qt):
 		$Label.text = String(1)
 		$Label.visible = true
 		$Label.add_color_override("font_color",Color(0,0,0,0))
+<<<<<<< HEAD
 		$Label.add_color_override("font_outline_modulate",Color("00000000"))
 		$Label.rect_scale = Vector2(.8,.8)
 		
 	elif stack_size <= 0:
 		queue_free()
 		
+=======
+		$Label.rect_scale = Vector2(.8,.8)
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 	else:
 		$Label.visible = true
 		$Label.text = String(item_quantity)

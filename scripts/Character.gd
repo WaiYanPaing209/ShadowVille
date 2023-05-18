@@ -3,6 +3,7 @@ extends KinematicBody2D
 export (int) var acceleration = 700
 var speed = 150
 var friction = 700
+<<<<<<< HEAD
 var distance = 0
 var loaction = Vector2.ZERO
 
@@ -11,16 +12,32 @@ const cooldown = preload("res://scripts/Cooldown.gd")
 #preload packedscenes
 onready var floatingTextPath = preload("res://UI/FloatingText.tscn")
 onready var ghostspellPath = preload("res://Spells/Ghost.tscn")
+=======
+
+const cooldown = preload("res://scripts/Cooldown.gd")
+
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 onready var projectilePath = preload("res://Spells/Projectile.tscn")
 
 onready var animationPlayer = $AnimationPlayer
 onready var animationtree = $AnimationTree
+<<<<<<< HEAD
 onready var spellCaster = $spellCaster/Position2D
 onready var hitbox = $PlayerHitbox
+=======
+onready var spellCaster = $Position2D
+onready var cooldownUI = $TextureRect/RichTextLabel
+onready var hitbox = $Hitbox
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 onready var animationstate = animationtree.get("parameters/playback")
+onready var ff = 3
 onready var velocity = Vector2.ZERO
+<<<<<<< HEAD
 onready var projectileCooldown = cooldown.new(PlayerStats.projectileCooldown)
 onready var ghostCooldown = cooldown.new(PlayerStats.ghostCooldown)
+=======
+onready var projectileCooldown = cooldown.new(0.2)
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 
 enum {
 	MOVE,
@@ -30,14 +47,20 @@ enum {
 var state = MOVE
 
 func _ready():
+<<<<<<< HEAD
 	collision_layer = 2
 	$Hurtbox/CollisionShape2D.disabled = false
 	$SprintEffect.hide()
 	$PlayerHitbox.damage = PlayerStats.damage
+=======
+	
+	$SprintEffect.hide()
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 	animationtree.active = true
 
 func _process(delta):
 	projectileCooldown.tick(delta)
+<<<<<<< HEAD
 	ghostCooldown.tick(delta)
 	PlayerStats.ghostTick = ghostCooldown.time
 	
@@ -54,6 +77,11 @@ func spellcast():
 		self.global_position = PlayerStats.ghostPosition
 		PlayerStats.teleported = true
 		
+=======
+	cooldownUI.set_text(str(round(projectileCooldown.time)))
+	$hp.text = str(PlayerStats.HP) + " / " + str(PlayerStats.MAX_HP)
+
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 func Sprint(delta):
 	if Input.get_action_strength("Sprint"):
 		if Input.is_action_just_pressed("Sprint"):
@@ -61,7 +89,11 @@ func Sprint(delta):
 			$SprintEffect.frame = 0 
 			$SprintEffect.play("default")
 		speed = 250
+<<<<<<< HEAD
 		PlayerStats.STAMINA -= PlayerStats.sprintEnergyCost * delta
+=======
+		PlayerStats.STAMINA -= 50 * delta
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 		if PlayerStats.STAMINA <= 0:
 			PlayerStats.STAMINA = 0
 			speed = 150
@@ -115,6 +147,7 @@ func move_state(delta):
 	velocity = move_and_slide(velocity)
 	
 	if Input.is_action_just_pressed("ui_accept"):
+<<<<<<< HEAD
 		if PlayerStats.STAMINA >= PlayerStats.basicAttackEnergyCost:
 			PlayerStats.STAMINA -= PlayerStats.basicAttackEnergyCost 
 			state = ATTACK
@@ -126,7 +159,12 @@ func move_state(delta):
 	spellcast()
 	if PlayerStats.die():
 		queue_free()
+=======
+		state = ATTACK
+	Sprint(delta)
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 	
+		
 func attack_state():
 	velocity = Vector2.ZERO
 	animationstate.travel("Attack")
@@ -142,6 +180,7 @@ func _input(event):
 			var pickup_item = $PickUpZone.items_in_range.values()[0]
 			pickup_item.pick_up_item(self)
 			$PickUpZone.items_in_range.erase(pickup_item)
+<<<<<<< HEAD
 
 
 	
@@ -160,3 +199,5 @@ func _on_Hurtbox_area_entered(area):
 
 
 
+=======
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d

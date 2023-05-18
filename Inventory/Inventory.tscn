@@ -241,10 +241,17 @@ custom_styles/panel = SubResource( 1 )
 script = ExtResource( 3 )
 
 [node name="EquipSlots" type="GridContainer" parent="."]
+<<<<<<< HEAD
 margin_left = 373.0
 margin_top = 149.0
 margin_right = 401.0
 margin_bottom = 246.0
+=======
+margin_left = 375.0
+margin_top = 152.0
+margin_right = 393.0
+margin_bottom = 236.0
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 custom_constants/vseparation = 6
 
 [node name="HeadSlot" type="Panel" parent="EquipSlots"]
@@ -255,10 +262,17 @@ custom_styles/panel = SubResource( 2 )
 script = ExtResource( 3 )
 
 [node name="TextureRect" type="TextureRect" parent="EquipSlots/HeadSlot"]
+<<<<<<< HEAD
 margin_left = 3.0
 margin_top = 3.0
 margin_right = 35.0
 margin_bottom = 35.0
+=======
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 17.0
+margin_bottom = 17.0
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 rect_scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 9 )
 
@@ -272,10 +286,17 @@ custom_styles/panel = SubResource( 2 )
 script = ExtResource( 3 )
 
 [node name="TextureRect" type="TextureRect" parent="EquipSlots/ShirtSlot"]
+<<<<<<< HEAD
 margin_left = 3.0
 margin_top = 4.0
 margin_right = 35.0
 margin_bottom = 36.0
+=======
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 17.0
+margin_bottom = 17.0
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 rect_scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 6 )
 
@@ -289,10 +310,17 @@ custom_styles/panel = SubResource( 2 )
 script = ExtResource( 3 )
 
 [node name="TextureRect" type="TextureRect" parent="EquipSlots/PantsSlot"]
+<<<<<<< HEAD
 margin_left = 3.0
 margin_top = 3.0
 margin_right = 19.0
 margin_bottom = 19.0
+=======
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 17.0
+margin_bottom = 17.0
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 texture = ExtResource( 7 )
 
 [node name="ShoesSlot" type="Panel" parent="EquipSlots"]
@@ -305,8 +333,15 @@ custom_styles/panel = SubResource( 2 )
 script = ExtResource( 3 )
 
 [node name="TextureRect" type="TextureRect" parent="EquipSlots/ShoesSlot"]
+<<<<<<< HEAD
 margin_left = 2.99997
 margin_top = 2.99998
 margin_right = 19.0
 margin_bottom = 19.0
+=======
+margin_left = 0.999969
+margin_top = 1.99998
+margin_right = 17.0
+margin_bottom = 18.0
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 texture = ExtResource( 5 )

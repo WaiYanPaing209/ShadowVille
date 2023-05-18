@@ -1,9 +1,12 @@
 extends CanvasLayer
 var holding_item = null
 
+<<<<<<< HEAD
 func _ready():
 	pass
 
+=======
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 func _input(event):
 	if event.is_action_pressed("Inventory"):
 		$Inventory.visible = !$Inventory.visible
@@ -16,6 +19,7 @@ func _input(event):
 
 func _process(_delta):
 	$StaminaBar.value = PlayerStats.STAMINA
+<<<<<<< HEAD
 	$HpBar.value = PlayerStats.HP
 	$HpBar.value = PlayerStats.HP
 	$HpBar.max_value = PlayerStats.MAX_HP
@@ -35,3 +39,6 @@ func _process(_delta):
 #		$HpBar.set("custom_styles/fg",Color("ab1212"))
 #	else:
 #		$HpBar.set("custom_styles/fg",Color("36a41b"))
+=======
+	$MP.text = str(PlayerStats.MP) + " / " + str(PlayerStats.MAX_MP)
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d

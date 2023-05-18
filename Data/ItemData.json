@@ -50,6 +50,7 @@
     "ItemCategory": "Resource",
     "StackSize": 10,
     "Description": "A vital liquid for every animals"
+<<<<<<< HEAD
   },
    "Bone": {
     "ItemCategory": "Resource",
@@ -60,5 +61,7 @@
     "ItemCategory": "Resource",
     "StackSize": 10,
     "Description": "The code for life"
+=======
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
   }
 }

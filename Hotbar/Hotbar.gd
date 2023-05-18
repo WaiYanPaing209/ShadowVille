@@ -1,6 +1,7 @@
 extends Node2D
 
 const SlotClass = preload("res://Inventory/Slot/Slot.gd")
+<<<<<<< HEAD
 const ItemClass = preload("res://Items/Item.gd")
 
 onready var hotbar_slots = $HotbarSlots
@@ -9,6 +10,14 @@ onready var active_item_label = $ActiveItemLabel
 onready var slots = hotbar_slots.get_children()
 onready var item_category
 onready var stack_size = 0
+=======
+
+onready var hotbar_slots = $HotbarSlots
+onready var active_item_label = $ActiveItemLabel
+onready var slots = hotbar_slots.get_children()
+onready var item_category
+onready var stack_size
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 onready var heal
 
 func _ready():
@@ -30,15 +39,20 @@ func update_active_item_label():
 	else:
 		active_item_label.text = ""
 
+<<<<<<< HEAD
 
 func _process(_delta):
 	var inventory = find_parent("UserInterface").find_node("Inventory")
+=======
+func _process(_delta):
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 	if slots[PlayerInventory.active_item_slot].item != null:
 		item_category = JsonData.item_data[slots[PlayerInventory.active_item_slot].item.item_name]["ItemCategory"]
 		var item_name = slots[PlayerInventory.active_item_slot].item.item_name 
 		active_item_label.text = item_name
 		match item_name:
 			"Magic Wand":
+<<<<<<< HEAD
 				if inventory.visible == false:
 					PlayerStats.canShoot = true
 				else: 
@@ -46,25 +60,43 @@ func _process(_delta):
 			"Slime Potion":
 				if stack_size == 0:
 					stack_size = int(slots[PlayerInventory.active_item_slot].item.item_quantity)
+=======
+				PlayerStats.canShoot = true
+			"Slime Potion":
+				stack_size = int(slots[PlayerInventory.active_item_slot].item.item_quantity)
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 				PlayerStats._healDeterminer()
 				if Input.is_action_just_pressed("ui_mouse_right_click") and PlayerStats.canHeal == true:
 					if stack_size > 0:
 						stack_size -= 1
 						print(stack_size)
 						PlayerStats.HP += heal
+<<<<<<< HEAD
 						PlayerStats._set_max_health()
 					if stack_size == 0:
 						PlayerStats.canHeal = false
+=======
+						PlayerStats._set_health()
+					if stack_size == 0:
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 						print("gone")
 	else:
 		PlayerStats.canShoot = false
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 func initialize_hotbar():
 	for i in range(slots.size()):
 		if PlayerInventory.hotbar.has(i):
 			slots[i].initialize_item(PlayerInventory.hotbar[i][0], PlayerInventory.hotbar[i][1])
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 func _input(_event):
 	if find_parent("UserInterface").holding_item:
 		find_parent("UserInterface").holding_item.global_position = get_global_mouse_position()

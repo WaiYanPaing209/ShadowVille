@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=54 format=2]
+=======
+[gd_scene load_steps=52 format=2]
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 
 [ext_resource path="res://scripts/Character.gd" type="Script" id=1]
 [ext_resource path="res://assets/CharacterSprite.png" type="Texture" id=2]
@@ -6,7 +10,10 @@
 [ext_resource path="res://Utlilty Scenes/ShadowBrush.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Utlilty Scenes/PickUpZone.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/SprintEffect.png" type="Texture" id=6]
+<<<<<<< HEAD
 [ext_resource path="res://Utlilty Scenes/Hurtbox.tscn" type="PackedScene" id=7]
+=======
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 
 [sub_resource type="AtlasTexture" id=51]
 atlas = ExtResource( 6 )
@@ -127,7 +134,11 @@ tracks/6/keys = {
 } ]
 }
 tracks/7/type = "value"
+<<<<<<< HEAD
 tracks/7/path = NodePath("PlayerHitbox/CollisionShape2D:disabled")
+=======
+tracks/7/path = NodePath("Hitbox/CollisionShape2D:disabled")
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -139,7 +150,11 @@ tracks/7/keys = {
 "values": [ true, false, true ]
 }
 tracks/8/type = "value"
+<<<<<<< HEAD
 tracks/8/path = NodePath("PlayerHitbox/CollisionShape2D:position")
+=======
+tracks/8/path = NodePath("Hitbox/CollisionShape2D:position")
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -254,7 +269,11 @@ tracks/7/keys = {
 } ]
 }
 tracks/8/type = "value"
+<<<<<<< HEAD
 tracks/8/path = NodePath("PlayerHitbox/CollisionShape2D:position")
+=======
+tracks/8/path = NodePath("Hitbox/CollisionShape2D:position")
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -266,7 +285,11 @@ tracks/8/keys = {
 "values": [ Vector2( -61, 0 ) ]
 }
 tracks/9/type = "value"
+<<<<<<< HEAD
 tracks/9/path = NodePath("PlayerHitbox/CollisionShape2D:disabled")
+=======
+tracks/9/path = NodePath("Hitbox/CollisionShape2D:disabled")
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -381,7 +404,11 @@ tracks/7/keys = {
 } ]
 }
 tracks/8/type = "value"
+<<<<<<< HEAD
 tracks/8/path = NodePath("PlayerHitbox/CollisionShape2D:position")
+=======
+tracks/8/path = NodePath("Hitbox/CollisionShape2D:position")
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -393,7 +420,11 @@ tracks/8/keys = {
 "values": [ Vector2( 63, 0 ) ]
 }
 tracks/9/type = "value"
+<<<<<<< HEAD
 tracks/9/path = NodePath("PlayerHitbox/CollisionShape2D:disabled")
+=======
+tracks/9/path = NodePath("Hitbox/CollisionShape2D:disabled")
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -496,7 +527,11 @@ tracks/6/keys = {
 } ]
 }
 tracks/7/type = "value"
+<<<<<<< HEAD
 tracks/7/path = NodePath("PlayerHitbox/CollisionShape2D:position")
+=======
+tracks/7/path = NodePath("Hitbox/CollisionShape2D:position")
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -508,7 +543,11 @@ tracks/7/keys = {
 "values": [ Vector2( 0, -48 ) ]
 }
 tracks/8/type = "value"
+<<<<<<< HEAD
 tracks/8/path = NodePath("PlayerHitbox/CollisionShape2D:disabled")
+=======
+tracks/8/path = NodePath("Hitbox/CollisionShape2D:disabled")
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -775,7 +814,11 @@ tracks/7/keys = {
 "values": [ 0.0 ]
 }
 tracks/8/type = "value"
+<<<<<<< HEAD
 tracks/8/path = NodePath("PlayerHitbox/CollisionShape2D:disabled")
+=======
+tracks/8/path = NodePath("Hitbox/CollisionShape2D:disabled")
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -787,7 +830,11 @@ tracks/8/keys = {
 "values": [ true ]
 }
 tracks/9/type = "value"
+<<<<<<< HEAD
 tracks/9/path = NodePath("PlayerHitbox/CollisionShape2D:position")
+=======
+tracks/9/path = NodePath("Hitbox/CollisionShape2D:position")
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -1046,6 +1093,7 @@ start_node = "Idle"
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=9]
 
+<<<<<<< HEAD
 [sub_resource type="GDScript" id=57]
 script/source = "extends Area2D
 
@@ -1058,6 +1106,8 @@ func _process(delta):
 
 "
 
+=======
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 [sub_resource type="CapsuleShape2D" id=49]
 radius = 16.0
 height = 22.0
@@ -1124,12 +1174,20 @@ parameters/Attack/blend_position = Vector2( -0.0079239, 0.0508475 )
 parameters/Idle/blend_position = Vector2( 0.00163937, 0 )
 parameters/Walk/blend_position = Vector2( 0.977813, 0.0517242 )
 
+<<<<<<< HEAD
 [node name="PlayerHitbox" parent="." instance=ExtResource( 3 )]
 collision_layer = 4
 collision_mask = 64
 script = SubResource( 57 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerHitbox"]
+=======
+[node name="Hitbox" parent="." instance=ExtResource( 3 )]
+collision_layer = 4
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 position = Vector2( -61, 0 )
 rotation = 1.5708
 shape = SubResource( 49 )
@@ -1140,6 +1198,19 @@ current = true
 
 [node name="Position2D" type="Position2D" parent="."]
 
+<<<<<<< HEAD
+=======
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -40.0
+margin_right = 40.0
+
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 [node name="PickUpZone" parent="." instance=ExtResource( 5 )]
 collision_layer = 0
 collision_mask = 128
@@ -1147,6 +1218,7 @@ collision_mask = 128
 [node name="CollisionShape2D" parent="PickUpZone" index="0"]
 shape = SubResource( 50 )
 
+<<<<<<< HEAD
 [node name="Hurtbox" parent="." instance=ExtResource( 7 )]
 collision_layer = 8
 collision_mask = 32
@@ -1166,3 +1238,16 @@ shape = SubResource( 7 )
 [editable path="PlayerHitbox"]
 [editable path="PickUpZone"]
 [editable path="Hurtbox"]
+=======
+[node name="hp" type="Label" parent="."]
+margin_left = -21.0
+margin_top = -58.0
+margin_right = 19.0
+margin_bottom = -44.0
+
+[connection signal="body_entered" from="PickUpZone" to="PickUpZone" method="_on_PickUpZone_body_entered"]
+[connection signal="body_exited" from="PickUpZone" to="PickUpZone" method="_on_PickUpZone_body_exited"]
+
+[editable path="Hitbox"]
+[editable path="PickUpZone"]
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d

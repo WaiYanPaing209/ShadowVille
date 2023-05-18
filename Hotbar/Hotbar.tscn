@@ -89,4 +89,8 @@ margin_top = 265.523
 margin_right = 301.762
 margin_bottom = 279.523
 custom_fonts/font = SubResource( 1 )
+<<<<<<< HEAD
 text = "lorem ipsum"
+=======
+text = "Sample Text"
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d

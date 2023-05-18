@@ -20,12 +20,20 @@ var inventory = {
 	1: ["Slime Potion", 11],
 	2: ["Slime Potion", 15],
 	3: ["Blood", 5],
+<<<<<<< HEAD
 	4: ["Blood", 6],
 	5: ["Tree Branch", 24],
 	7: ["Bone", 5]
 }
 
 func _ready():
+=======
+	4: ["Blood", 6]
+}
+
+func _ready():
+	
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 	var attribute : Dictionary = JsonData.item_data["Hood"]["Attributes"]
 	print(attribute)
 	var strength = attribute["Strength"]
@@ -34,7 +42,11 @@ func _ready():
 
 var hotbar = {
 	0: ["Magic Wand", 1],
+<<<<<<< HEAD
 	3: ["Slime Potion", 6]
+=======
+	3: ["Slime Potion", 4]
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 }
 
 var equips = {
@@ -105,6 +117,7 @@ func add_item_quantity(slot: SlotClass, quantity_to_add: int):
 #			equips[slot.slot_index][1] += quantity_to_add
 			
 func deduce_item_quantity(slot: SlotClass, quantity_to_deduce: int):
+<<<<<<< HEAD
 	match slot.SlotType:
 		SlotClass.SlotType.HOTBAR:
 			var item = hotbar[slot.slot_index]
@@ -130,6 +143,15 @@ func deduce_item_quantity(slot: SlotClass, quantity_to_deduce: int):
 				slot.destroy_item()
 			else:
 				slot.set_item(item[0], item[1])
+=======
+	match slot.slotType:
+		SlotClass.SlotType.HOTBAR:
+			hotbar[slot.slot_index][1] -= quantity_to_deduce
+		SlotClass.SlotType.INVENTORY:
+			inventory[slot.slot_index][1] -= quantity_to_deduce
+#		_:
+			equips[slot.slot_index][1] -= quantity_to_deduce
+>>>>>>> 975870f479064bc9fd4525c5a97b9aaa4e95f42d
 ###
 ### Hotbar Related Functions
 func active_item_scroll_up():
